@@ -1,4 +1,4 @@
-package com.co.dlp.login.registration;
+package com.co.dlp.plibrary.registration;
 
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.co.dlp.login.registration;
+package com.co.dlp.plibrary.registration;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

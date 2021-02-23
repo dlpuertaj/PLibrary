@@ -1,11 +1,11 @@
-package com.co.dlp.login.registration;
+package com.co.dlp.plibrary.registration;
 
-import com.co.dlp.login.email.EmailSender;
-import com.co.dlp.login.registration.token.ConfirmationToken;
-import com.co.dlp.login.registration.token.ConfirmationTokenService;
-import com.co.dlp.login.user.User;
-import com.co.dlp.login.user.UserRole;
-import com.co.dlp.login.user.UserService;
+import com.co.dlp.plibrary.email.EmailSender;
+import com.co.dlp.plibrary.registration.token.ConfirmationToken;
+import com.co.dlp.plibrary.registration.token.ConfirmationTokenService;
+import com.co.dlp.plibrary.user.User;
+import com.co.dlp.plibrary.user.UserRole;
+import com.co.dlp.plibrary.user.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

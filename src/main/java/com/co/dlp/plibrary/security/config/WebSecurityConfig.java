@@ -1,4 +1,4 @@
-package com.co.dlp.login.security.config;
+package com.co.dlp.plibrary.security.config;
 
 import com.co.dlp.login.user.UserService;
 import lombok.AllArgsConstructor;

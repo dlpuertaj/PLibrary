@@ -1,4 +1,4 @@
-package com.co.dlp.login.email;
+package com.co.dlp.plibrary.email;
 
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
