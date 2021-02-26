@@ -1,6 +1,7 @@
-package com.co.dlp.plibrary.user;
+package com.co.dlp.plibrary.repositories;
 
 
+import com.co.dlp.plibrary.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

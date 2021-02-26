@@ -1,6 +1,6 @@
 package com.co.dlp.plibrary.security.config;
 
-import com.co.dlp.plibrary.user.UserService;
+import com.co.dlp.plibrary.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

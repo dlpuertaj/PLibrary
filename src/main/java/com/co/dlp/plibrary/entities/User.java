@@ -1,5 +1,6 @@
-package com.co.dlp.plibrary.user;
+package com.co.dlp.plibrary.entities;
 
+import com.co.dlp.plibrary.entities.enums.UserRole;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.co.dlp.plibrary.registration;
+package com.co.dlp.plibrary.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

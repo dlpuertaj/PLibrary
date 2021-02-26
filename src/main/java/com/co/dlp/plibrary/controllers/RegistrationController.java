@@ -1,5 +1,7 @@
-package com.co.dlp.plibrary.registration;
+package com.co.dlp.plibrary.controllers;
 
+import com.co.dlp.plibrary.entities.RegistrationRequest;
+import com.co.dlp.plibrary.services.RegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

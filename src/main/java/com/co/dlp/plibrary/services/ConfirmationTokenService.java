@@ -1,5 +1,7 @@
-package com.co.dlp.plibrary.registration.token;
+package com.co.dlp.plibrary.services;
 
+import com.co.dlp.plibrary.entities.ConfirmationToken;
+import com.co.dlp.plibrary.repositories.ConfirmationTokenRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
