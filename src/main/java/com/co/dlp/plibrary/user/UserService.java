@@ -1,7 +1,7 @@
-package com.co.dlp.login.user;
+package com.co.dlp.plibrary.user;
 
-import com.co.dlp.login.registration.token.ConfirmationToken;
-import com.co.dlp.login.registration.token.ConfirmationTokenService;
+import com.co.dlp.plibrary.registration.token.ConfirmationToken;
+import com.co.dlp.plibrary.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

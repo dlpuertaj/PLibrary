@@ -1,4 +1,4 @@
-package com.co.dlp.login.user;
+package com.co.dlp.plibrary.user;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

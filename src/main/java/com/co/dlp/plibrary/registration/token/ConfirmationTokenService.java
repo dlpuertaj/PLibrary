@@ -1,4 +1,4 @@
-package com.co.dlp.login.registration.token;
+package com.co.dlp.plibrary.registration.token;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.co.dlp.login.user;
+package com.co.dlp.plibrary.user;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

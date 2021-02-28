@@ -1,4 +1,4 @@
-package com.co.dlp.login.security;
+package com.co.dlp.plibrary.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

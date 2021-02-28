@@ -1,10 +1,10 @@
-package com.co.dlp.login;
+package com.co.dlp.plibrary;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LoginApplicationTests {
+class PLibraryApplicationTests {
 
 	@Test
 	void contextLoads() {
