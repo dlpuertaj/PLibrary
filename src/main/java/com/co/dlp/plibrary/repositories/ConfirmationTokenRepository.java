@@ -1,5 +1,6 @@
-package com.co.dlp.plibrary.registration.token;
+package com.co.dlp.plibrary.repositories;
 
+import com.co.dlp.plibrary.entities.ConfirmationToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

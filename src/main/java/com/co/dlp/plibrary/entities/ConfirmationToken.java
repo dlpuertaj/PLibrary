@@ -1,6 +1,6 @@
-package com.co.dlp.plibrary.registration.token;
+package com.co.dlp.plibrary.entities;
 
-import com.co.dlp.plibrary.user.User;
+import com.co.dlp.plibrary.entities.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

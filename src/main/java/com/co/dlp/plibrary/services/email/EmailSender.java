@@ -1,4 +1,4 @@
-package com.co.dlp.plibrary.email;
+package com.co.dlp.plibrary.services.email;
 
 public interface EmailSender {
 
