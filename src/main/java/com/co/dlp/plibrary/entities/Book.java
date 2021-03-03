@@ -1,11 +1,13 @@
 package com.co.dlp.plibrary.entities;
 
 import com.co.dlp.plibrary.entities.enums.Genre;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Year;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,13 +22,14 @@ public class Book  implements Serializable {
     @Column(nullable = false, updatable = false)
     private Integer id;
     private String title;
-    @Column(nullable = false, updatable = false)
     private String isbn;
-    private String imgUrl;
+    //private String imgUrl;
     private Integer pages;
-    private Year published;
+    @Column(length = 4)
+    private String published;
 
-    @OneToOne(mappedBy = "author")
-    private Author author;
+    @ManyToMany(mappedBy = "books")
+    @JsonIgnore
+    private List<Author> authors;
     private Genre genre;
 }

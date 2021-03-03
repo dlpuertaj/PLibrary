@@ -18,6 +18,7 @@ spring:
     show-sql: true
 
   mail:
+    active: N
     host: localhost
     port: 1025
     username: hello

@@ -28,11 +28,11 @@ public class BookController {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Book> getBook(@PathVariable("id") Integer id){
-        Book book = bookService.findBookById(id);
+        Book book = bookService.findById(id);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }
 
-    @PostMapping("/add/")
+    @PostMapping("/add")
     public ResponseEntity<Book> addBook(@RequestBody Book book){
         Book newBook = bookService.addBook(book);
         return new ResponseEntity<>(newBook, HttpStatus.CREATED);

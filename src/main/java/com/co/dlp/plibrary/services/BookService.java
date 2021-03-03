@@ -29,8 +29,8 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public Book findBookById(Integer id){
-        return bookRepository.findBookById(id).orElseThrow(() -> new BookNotFoundException("Book not found"));
+    public Book findById(Integer id){
+        return bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found"));
     }
 
     public  void deleteBook(Integer id){
