@@ -1,3 +1,99 @@
-<div *ngFor="let book of books">
-  <div>{{book.title}}</div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" style="color:white;">Personal Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+     <ul class="navbar-nav mr-auto">
+        <!--
+        <li class="nav-item active">
+           <a class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee <span class="sr-only">(current)</span></a>
+        </li>
+        -->
+     </ul>
+     <!--
+     <form class="form-inline my-2 my-lg-0">
+        <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required>
+     </form>
+     -->
+  </div>
+</nav>
+<div class="container">
+    <div class="row clearfix">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="boxs project_widget">
+                     <div class="pw_img">
+                        <img class="img-responsive" src="https://via.placeholder.com/280x280/87CEFA/000000" alt="About the image">
+                    </div>
+                    <div class="pw_content">
+                        <div class="pw_header">
+                            <h6>Book Title</h6>
+                            <small class="text-muted">Other description</small>
+                        </div>
+                        <div class="pw_meta">
+                            <span>Other Info</span>
+                            <small class="text-muted">Otrher Info</small>
+                            <small class="text-danger">Other Info</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="boxs project_widget">
+                    <div class="pw_img">
+                        <img class="img-responsive" src="https://via.placeholder.com/280x280/87CEFA/000000" alt="About the image">
+                    </div>                            
+                    <div class="pw_content">
+                        <div class="pw_header">
+                            <h6>New Dashboard</h6>
+                            <small class="text-muted">Falcon  |  Last Update: 17 Dec 2017</small>
+                        </div>
+                        <div class="pw_meta">
+                            <span>921 USD</span>
+                            <small class="text-muted">Budget / Salary</small>
+                            <small class="text-success">Early Dec 2017</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="boxs project_widget">
+                     <div class="pw_img">
+                        <img class="img-responsive" src="https://via.placeholder.com/280x280/FF7F50/000000" alt="About the image">
+                    </div>
+                    <div class="pw_content">
+                        <div class="pw_header">
+                            <h6>Mobile App</h6>
+                            <small class="text-muted">Falcon  |  Last Update: 21 Dec 2017</small>
+                        </div>
+                        <div class="pw_meta">
+                            <span>1,870 USD</span>
+                            <small class="text-muted">Budget / Salary</small>
+                            <small class="text-danger">10 Days Remaining</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="boxs project_widget">
+                     <div class="pw_img">
+                        <img class="img-responsive" src="https://via.placeholder.com/280x280/20B2AA/000000" alt="About the image">
+                    </div>
+                    <div class="pw_content">
+                        <div class="pw_header">
+                            <h6>New Dashboard</h6>
+                            <small class="text-muted">Falcon  |  Last Update: 28 Dec 2017</small>
+                        </div>
+                        <div class="pw_meta">
+                            <span>870 USD</span>
+                            <small class="text-muted">Budget / Salary</small>
+                            <small class="text-warning">6 Days Remaining</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
