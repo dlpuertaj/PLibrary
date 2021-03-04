@@ -6,7 +6,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.Year;
 import java.util.List;
 
 @AllArgsConstructor
