@@ -31,4 +31,6 @@ public class Book  implements Serializable {
     @JsonIgnore
     private List<Author> authors;
     private Genre genre;
+
+    private String imgUrl;
 }

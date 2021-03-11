@@ -5,12 +5,17 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarColor02">
      <ul class="navbar-nav mr-auto">
-        <!--
+
         <li class="nav-item active">
-           <a class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee <span class="sr-only">(current)</span></a>
+           <a class="nav-link" data-toggle="modal"
+           data-target="#exampleModal">Add Book <span class="sr-only">(current)</span></a>
         </li>
-        -->
+
      </ul>
+     <form class="form-inline my-2 my-lg-0">
+        <input type="search" name="key=" name="key" id="searchName"
+        class="form-control mr-sm-2" placeholder="Search books..." required>
+     </form>
      <!--
      <form class="form-inline my-2 my-lg-0">
         <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
@@ -21,20 +26,26 @@
 </nav>
 <div class="container">
     <div class="row clearfix">
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div *ngFor="let book of books" class="col-md-3 col-sm-6 col-xs-12">
                 <div class="boxs project_widget">
                      <div class="pw_img">
-                        <img class="img-responsive" src="https://via.placeholder.com/280x280/87CEFA/000000" alt="About the image">
+                        <img class="img-responsive" src="{{book?.imgUrl}}" alt="{{book?.title}}">
                     </div>
                     <div class="pw_content">
                         <div class="pw_header">
-                            <h6>Book Title</h6>
-                            <small class="text-muted">Other description</small>
+                            <h6>{{book?.title}}</h6>
+                            <small class="text-muted">{{book.author}}</small>
                         </div>
                         <div class="pw_meta">
-                            <span>Other Info</span>
-                            <small class="text-muted">Otrher Info</small>
-                            <small class="text-danger">Other Info</small>
+                            <span>{{book.genre}}</span>
+                            <small class="text-muted">{{book.published}}</small>
+                            <small class="text-danger">{{book.pages}}</small>
+                        </div>
+                        <div class="pw_meta">
+                            <div class="float-center btn-group btn-group-sm">
+                                <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                                <a class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,7 +55,7 @@
                 <div class="boxs project_widget">
                     <div class="pw_img">
                         <img class="img-responsive" src="https://via.placeholder.com/280x280/87CEFA/000000" alt="About the image">
-                    </div>                            
+                    </div>
                     <div class="pw_content">
                         <div class="pw_header">
                             <h6>New Dashboard</h6>
