@@ -5,6 +5,6 @@ export interface Book{
 	pages: number;
 	published: string;
 	genre: string;
-	imgUrl: string;
+	imageUrl: string;
 	author: string;
 }

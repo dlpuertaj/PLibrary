@@ -28,11 +28,11 @@ public class Author implements Serializable {
     @Column(length = 4, nullable = true)
     private String yearOfBirth;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    /*@ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "book_author",
             joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "author_id",
                     referencedColumnName = "id"))
-    @JsonIgnore
-    private List<Book> books;
+    @JsonIgnore*/
+    private Book book;
 }

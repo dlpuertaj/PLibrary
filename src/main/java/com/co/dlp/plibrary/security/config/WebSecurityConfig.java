@@ -27,6 +27,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         String enabled = environment.getProperty("spring.mail.active");
         System.out.println("Email verification enabled: " + enabled);
+        http
+                .csrf().disable();
+
         if(enabled.equalsIgnoreCase("S")){
             http
                     .csrf().disable()

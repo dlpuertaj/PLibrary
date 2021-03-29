@@ -22,15 +22,12 @@ public class Book  implements Serializable {
     private Integer id;
     private String title;
     private String isbn;
-    //private String imgUrl;
     private Integer pages;
     @Column(length = 4)
     private String published;
 
-    @ManyToMany(mappedBy = "books")
-    @JsonIgnore
-    private List<Author> authors;
+    private String author;
     private Genre genre;
 
-    private String imgUrl;
+    private String imageUrl;
 }

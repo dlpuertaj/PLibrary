@@ -11,8 +11,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'libraryapp';
-  books: Book[] = [];
+  public books: Book[] = [];
+  public editBook!: Book;
+  public deleteBook!: Book;
 
   constructor(private bookService: BookService){}
 
@@ -24,10 +25,121 @@ export class AppComponent implements OnInit{
   	this.bookService.getBooks().subscribe(
 		(response: Book[]) => {
 			this.books = response;
+      console.log(this.books);
 		},
 		(error: HttpErrorResponse) => {
 			alert(error.message);
 		}
 	);
+  }
+
+  /**
+   * onAddBook
+   */
+  public onAddBook(addForm: NgForm): void  {
+    var element = document.getElementById('add-book-form')!.click();
+    this.bookService.addBook(addForm.value).subscribe(
+        (response: Book) => {
+          console.log(response);
+          this.getBooks();
+          addForm.reset();
+
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+          addForm.reset();
+
+        }
+    );
+  }
+
+  /**
+   * onUpdateBook
+   */
+  public onUpdateBook(book: Book): void  {
+    this.bookService.updateBook(book).subscribe(
+        (response: Book) => {
+          console.log(response);
+          this.getBooks();
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+    );
+  }
+
+  /**
+   * onDeleteBook
+   */
+  public onDeleteBook(bookId: number): void  {
+    this.bookService.deleteBook(bookId).subscribe(
+        (response: void) => {
+          console.log(response);
+          this.getBooks();
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+    );
+  }
+
+  public searchBooks(key: String): void{
+    const results: Book[] = [];
+
+    for(const book of this.books){
+      if(book.title.toLowerCase().indexOf(key.toLowerCase()) !== -1){
+        results.push(book);
+      }
+    }
+
+    this.books = results;
+    if(results.length === 0 || !key){
+      this.getBooks();
+    }
+  }
+
+  public onCreateModal(mode: string): void{
+    const container = document.getElementById('main-container')!;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+
+    button.setAttribute('data-toggle','modal');
+
+    if(mode === 'add'){
+      button.setAttribute('data-target','#addBookModal');
+    }
+
+    container.appendChild(button);
+
+    button.click();
+
+  }
+
+  public onOpenModal(book: Book , mode: string): void{
+    const container = document.getElementById('main-container')!;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+
+    button.setAttribute('data-toggle','modal');
+
+    //if(mode === 'add'){
+      //button.setAttribute('data-target','#addBookModal');
+    //}
+
+    if(mode === 'edit'){
+      this.editBook = book;
+      button.setAttribute('data-target','#updateBookModal');
+    }
+
+    if(mode === 'delete'){
+      this.deleteBook = book;
+      button.setAttribute('data-target','#deleteBookModal');
+    }
+
+    container.appendChild(button);
+
+    button.click();
   }
 }
