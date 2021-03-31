@@ -24,11 +24,11 @@
     <div *ngFor="let book of books" class="col-md-3 col-sm-6 col-xs-12">
         <div class="boxs project_widget">
              <div class="pw_img">
-                <img class="img-responsive" src="{{book?.imageUrl}}" alt="{{book?.title}}">
+                <img class="img-responsive" src="{{book?.imageUrl}}" alt="{{book?.imageUrl}}">
             </div>
             <div class="pw_content">
                 <div class="pw_header">
-                    <h6>{{book?.title}}</h6>
+                    <h6>{{book.title}}</h6>
                     <small class="text-muted">{{book.author}}</small>
                 </div>
                 <div class="pw_meta">
@@ -83,7 +83,7 @@
               </div>
               <div class="form-group">
                  <label for="published">Published</label>
-                 <input type="text" ngModel name="author" class="form-control" id="published" placeholder="Author" required>
+                 <input type="text" ngModel name="published" class="form-control" id="published" placeholder="Published" required>
               </div>
               <div class="form-group">
                  <label for="imageUrl">Image URL</label>
@@ -110,13 +110,13 @@
              </button>
           </div>
           <div class="modal-body">
-             <form #editForm="ngForm" >s
+             <form #editForm="ngForm" >
                 <div class="form-group">
                    <label for="title">Title</label>
                    <input type="text" ngModel="{{editBook?.title}}" name="title" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
                 </div>
 
-                <input type="hidden" ngModel="{{editBook?.id}}" name="isbn" class="form-control" id="id" placeholder="Id">
+                <input type="hidden" ngModel="{{editBook?.id}}" name="id" class="form-control" id="id" placeholder="Id">
 
                 <div class="form-group">
                    <label for="genre">Genre</label>
@@ -127,21 +127,30 @@
                    <label for="author">Author</label>
                    <input type="text" ngModel="{{editBook?.author}}" name="author" class="form-control" id="author" name="author" placeholder="Author">
                 </div>
+
                 <div class="form-group">
                    <label for="published">Published</label>
                    <input type="text" ngModel="{{editBook?.published}}" name="published" class="form-control" id="published" name="published" placeholder="Published">
                 </div>
+
                 <div class="form-group">
-                   <label for="published">ISBN</label>
-                   <input type="text" ngModel="{{editBook?.isbn}}" name="published" class="form-control" id="isbn" name="isbn" placeholder="ISBN">
+                   <label for="pages">Pages</label>
+                   <input type="text" ngModel="{{editBook?.pages}}" name="ppages" class="form-control" id="pages" name="pages" placeholder="Pages">
                 </div>
+
                 <div class="form-group">
-                   <label for="phone">Image URL</label>
+                   <label for="isbn">ISBN</label>
+                   <input type="text" ngModel="{{editBook?.isbn}}" name="isbn" class="form-control" id="isbn" name="isbn" placeholder="ISBN">
+                </div>
+
+                <div class="form-group">
+                   <label for="imageUrl">Image URL</label>
                    <input type="text" ngModel="{{editBook?.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL">
                 </div>
+
                 <div class="modal-footer">
                    <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                   <button (click)="onUpdateBook(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+                   <button (click)="onUpdateBook(editForm.value)" data-dismiss="modal" class="btn btn-primary"> Save changes </button>
                 </div>
              </form>
           </div>
